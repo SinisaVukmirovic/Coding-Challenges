@@ -29,10 +29,11 @@ header {
     .menu-btn {
         cursor: pointer;
         border: none;
-        outline: none;
+        /* outline: none; */
         z-index: 2;
         display: grid;
         place-items: space-between;
+        align-items: center;
         width: 3.5rem;
         height: 3rem;
         background-color: transparent;
