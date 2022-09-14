@@ -1,0 +1,45 @@
+:root {
+  --on: #6948ed;
+  --off: #555;
+  --toggle-width: 80px;
+  --toggle-height: 30px;
+}
+body {
+  background: #333;
+}
+
+.toggle input {
+	/* width: 0;
+	height: 0; */
+	display: none;
+}
+
+.switch {
+	display: block;
+	width: var(--toggle-width);
+	height: var(--toggle-height);
+	background-color: var(--off);
+	border-radius: 100vh;
+	margin: 10rem auto;
+	padding: 5px;
+	cursor: pointer;
+	position: relative;
+	transition: background-color 250ms ease;
+}
+.switch::before {
+	content: "";
+	position: absolute;
+	display: block;
+	height: var(--toggle-height);
+	aspect-ratio: 1 / 1;
+	border-radius: 100vh;
+	background-color: #eee;
+	transition: transform 250ms ease;
+}
+
+input:checked + .switch {
+	background-color: var(--on);
+}
+input:checked ~ .switch::before {
+	transform: translateX(calc(var(--toggle-width) - var(--toggle-height)));
+}
