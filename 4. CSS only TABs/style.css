@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=VT323&display=swap');
+
+:root {
+  --primary: #00b29d;
+  --text-clr: #111;
+  --bg-clr: #fff;
+}
+
+body {
+  background: #f2f2f2;
+  font-family: "Poppins";
+}
+.tabs {
+  width: 600px;
+  margin: 100px auto;
+}
+
+/* buttons */
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    background-color: var(--bg-clr);
+}
+
+.tab-btn {
+    padding: .5rem;
+    width: 33.33%;
+    border: 1px solid #ccc;    
+    color: var(--text-clr);
+    text-decoration: none;
+}
+.tab-btn:hover {
+    background-color: var(--primary);
+}
+
+/* panels */
+.panels {
+    position: relative;
+}
+
+.panel {
+    position: absolute;
+    opacity: 0;
+    background-color: var(--bg-clr);
+}
+.panel:target {
+    opacity: 1;
+}
