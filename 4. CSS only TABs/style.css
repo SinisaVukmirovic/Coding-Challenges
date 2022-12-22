@@ -25,6 +25,7 @@ body {
 .tab-btn {
     padding: .5rem;
     width: 33.33%;
+    /* flex-grow: 1; */
     border: 1px solid #ccc;    
     color: var(--text-clr);
     text-decoration: none;
@@ -40,9 +41,11 @@ body {
 
 .panel {
     position: absolute;
-    opacity: 0;
+    /* opacity: 0; */
+    display: none;
     background-color: var(--bg-clr);
 }
 .panel:target {
-    opacity: 1;
+    /* opacity: 1; */
+    display: block;
 }
